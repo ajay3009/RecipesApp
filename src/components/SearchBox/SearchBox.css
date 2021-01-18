@@ -1,0 +1,25 @@
+.search-input {
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.search-input label {
+    padding-right: 10px;
+}
+
+.search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.search-filters section {
+    width: 45%;
+}
+
+.search-input input, .search-filters .search-filter select, .search-filters input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}

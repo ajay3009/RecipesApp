@@ -1,0 +1,101 @@
+{
+    "filterMapper" : [
+        {
+            "type": "select",
+            "title": "Meal Type",
+            "forLabel": "mealType",
+            "values": [
+                "Breakfast",
+                "Lunch",
+                "Dinner",
+                "Snack",
+                "Teatime"
+            ]
+        },
+        {
+            "type": "select",
+            "title": "Dish Type",
+            "forLabel": "dishType",
+            "values": [
+                "Alcohol-cocktail",
+                "Biscuits and cookies",
+                "Bread",
+                "Cereals",
+                "Condiments and sauces",
+                "Drinks",
+                "Desserts",
+                "Egg",
+                "Main course",
+                "Omelet",
+                "Pancake",
+                "Preps",
+                "Preserve",
+                "Salad",
+                "Sandwiches",
+                "Soup",
+                "Starter"
+            ]
+        },
+        {
+            "type": "select",
+            "title": "Cuisine Type",
+            "forLabel": "cuisineType",
+            "values": [
+                "American",
+                "Asian",
+                "British",
+                "Caribbean",
+                "Central Europe",
+                "Chinese",
+                "Eastern Europe",
+                "French",
+                "Indian",
+                "Italian",
+                "Japanese",
+                "Kosher",
+                "Mediterranean",
+                "Mexican",
+                "Middle Eastern",
+                "Nordic",
+                "South American",
+                "South East Asian"
+            ]
+        },
+        {
+            "type": "select",
+            "title": "Health",
+            "forLabel": "health",
+            "values": [
+                "alcohol-free",
+                "immuno-supportive",
+                "celery-free",
+                "crustacean-free"
+            ]
+        },
+        {
+            "type": "select",
+            "title": "Diet",
+            "forLabel": "diet",
+            "values": [
+                "balanced",
+                "high-fiber",
+                "high-protein",
+                "low-carb",
+                "low-fat",
+                "low-sodium"
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Calories",
+            "forLabel": "calories",
+            "values": ""
+        },
+        {
+            "type": "input",
+            "title": "Time",
+            "forLabel": "time",
+            "values": ""
+        }
+    ] 
+}

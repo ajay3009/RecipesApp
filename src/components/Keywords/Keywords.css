@@ -1,0 +1,21 @@
+.keyword-section ul {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+}
+
+.keyword-section ul li {
+    margin: 0 8px 6px 0;
+}
+
+.keyword-section ul li span{
+    position: relative;
+    background-color: #fff;
+    text-transform: capitalize;
+    color: #3e4152;
+    cursor: default;
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #d4d5d9;
+}
