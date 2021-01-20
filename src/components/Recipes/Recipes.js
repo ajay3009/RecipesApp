@@ -15,9 +15,23 @@ const recipeReducer = (state, action) => {
     }
 }
 
+const httpReducer = (state, action) => {
+    switch(action.type) {
+        case 'SEND':
+            return { loading: true, error: null}
+        case 'RESPONSE':
+            return { ...state, loading: false}
+        case 'ERROR':
+            return { loading: false, error: action.error }
+        default:
+            throw new Error('Should not be reached');
+    }
+}
+
 const Recipes = (props) => {
     const [recipes, dispatch] = useReducer(recipeReducer, []);
     // const [recipes, setRecipes] = useState({});
+    const [httpState, dispatchHttp] = useReducer(httpReducer, { error: null, loading: false });
     const [error, setError] = useState('');
     const [initialState, setInitialState] = useState(false);
 
