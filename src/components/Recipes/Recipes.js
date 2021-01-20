@@ -1,21 +1,35 @@
-import React, { useState, useCallback } from 'react';
+import React, { useReducer, useState, useCallback } from 'react';
 import RecipesList from './RecipesList/RecipesList';
 import SearchBox from '../SearchBox/SearchBox';
 import './Recipes.css';
 import loading from './../../assets/images/loading.gif';
 
+const recipeReducer = (state, action) => {
+    switch(action.type) {
+        case 'SET':
+            return action.recipes;
+        case 'ADD':
+            return [...state, action.recipe];
+        default: 
+            throw new Error('Should not get here!')
+    }
+}
+
 const Recipes = (props) => {
-    const [recipes, setRecipes] = useState({});
+    const [recipes, dispatch] = useReducer(recipeReducer, []);
+    // const [recipes, setRecipes] = useState({});
     const [error, setError] = useState('');
     const [initialState, setInitialState] = useState(false);
 
     const filteredRecipesHandler = useCallback((filteredRecipes) => {
-        setRecipes(filteredRecipes);
+        // setRecipes(filteredRecipes);
+        dispatch({ type: 'SET', recipes: filteredRecipes });
         setError(null);
     },[]);
 
     const recipesErrorHandler = useCallback(error => {
-        setRecipes(null);
+        // setRecipes(null);
+        dispatch({ type: 'SET', recipes: null });
         setError(error);
     }, []);
 
